@@ -9,6 +9,8 @@ setup(
     include_package_data=True,
     install_requires=[
         'flask',
+        'requests',
+        'requests_futures'
     ],
     setup_requires=[
         'pytest-runner',
