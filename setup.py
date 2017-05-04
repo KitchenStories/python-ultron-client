@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='Ultron Client',
+    name='ultron client',
     version='0.1.0',
     description='Python Ultron async Client',
     author='Trung Phan',
