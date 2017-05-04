@@ -1,0 +1,9 @@
+# Testing
+mock
+pytest
+
+# Linting
+flake8
+
+coverage
+ipython

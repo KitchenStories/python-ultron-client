@@ -1,0 +1,4 @@
+# App-Requirements
+requests==2.13.0
+Flask==0.12.1
+requests_futures==0.9.7
