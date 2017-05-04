@@ -3,6 +3,8 @@ from setuptools import setup
 setup(
     name='Ultron Client',
     version='0.1.0',
+    description='Python Ultron async Client',
+    author='Trung Phan',
     packages=['ultron_client'],
     include_package_data=True,
     install_requires=[
