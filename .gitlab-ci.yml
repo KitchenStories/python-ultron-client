@@ -1,0 +1,14 @@
+types:
+  - lint
+  - test
+
+lint:
+  type: lint
+  script:
+    - flake8 . --show-source
+
+test:
+  type: test
+  script:
+    - . gitlab_prepare.sh
+    - PYTHONPATH=. py.test .
