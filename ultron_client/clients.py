@@ -39,26 +39,24 @@ class FlaskUltronAsyncService(object):
 
     def get(self, key, url, parameters=None):
         """
-        Build future objects for concurrency 
+        Build future objects for concurrency
 
         Args:
-            key: this is need for remap response to object, because odering of future 
+            key: this is need for remap response to object, because odering of future
                     objects is not guaranteed
             url: the url of the resource
             parameters: request get-parameters
 
         Returns: nothing
-
         """
         full_url = '{}{}'.format(self.server, url)
         self.futures[key] = self.session.get(full_url, headers=self.headers, params=parameters)
 
     def results(self):
         """
-        Fetches all concurrency objects 
+        Fetches all concurrency objects
 
         Returns: Dict {key: request.response.json object}, ulron-headers
-
         """
         resp_data = {}
         res = {}

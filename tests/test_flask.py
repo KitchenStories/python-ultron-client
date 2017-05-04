@@ -1,7 +1,5 @@
 import flask
-import time
-# import datetime
-#
+
 from mock import MagicMock
 from concurrent.futures import Future
 from werkzeug.datastructures import Headers
@@ -22,6 +20,7 @@ ULTRON_HEADERS = {
 def mock_json(*args, **kwargs):
     # time.sleep(0.5)
     return MagicMock(json=MagicMock(return_value={'yeeah': 'json'}))
+
 
 Future.result = MagicMock(side_effect=mock_json)
 
@@ -76,4 +75,3 @@ class TestFlask(object):
 
             for h in ultron.resp_headers_copy:
                 assert h in resp.headers.keys()
-
